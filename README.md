@@ -50,7 +50,7 @@ git init && git add . && git commit -m 'feat: initial commit'
 
 #### Step 3: 🏃‍♂️ Running the Project
 
-- Development Mode: `pnpm start:dev`
+- Development Mode: `pnpm dev`
 - Building: `pnpm build`
 - Production Mode: Set `NODE_ENV="production"` in `.env` then `pnpm build && pnpm start:prod`
 
@@ -73,7 +73,8 @@ We'd love to hear your feedback and suggestions for further improvements. Feel f
 │   ├── common
 │   │   └── utils
 │   │       ├── commonValidation.ts
-│   │       └── envConfig.ts
+│   │       ├── envConfig.ts
+│   │       └── logger.ts
 │   └── index.ts
 ├── tsconfig.json
 └── vite.config.mts
