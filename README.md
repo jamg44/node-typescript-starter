@@ -4,7 +4,7 @@
 
 Welcome to Node.js TypeScript Boilerplate 2025 – a simple and ready-to-use starting point for building backend services with TypeScript.
 
-Based on: https://github.com/edwinhern/express-typescript
+Based on: [express-typescript](https://github.com/edwinhern/express-typescript)
 
 ## 💡 Why We Made This
 
