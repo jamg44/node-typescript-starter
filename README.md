@@ -72,6 +72,7 @@ We'd love to hear your feedback and suggestions for further improvements. Feel f
 ├── src
 │   ├── common
 │   │   └── utils
+│   │       ├── __tests__
 │   │       ├── commonValidation.ts
 │   │       ├── envConfig.ts
 │   │       └── logger.ts
