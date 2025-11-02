@@ -8,6 +8,9 @@ export default defineConfig({
 		},
 		globals: true,
 		restoreMocks: true,
+		env: {
+			LOG_LEVEL: "silent",
+		},
 	},
 	plugins: [tsconfigPaths()],
 })

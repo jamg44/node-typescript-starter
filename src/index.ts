@@ -9,7 +9,8 @@ async function main() {
 	logger.info({ env: env.NODE_ENV, log_level: env.LOG_LEVEL }, "Service starting...")
 
 	// Your application logic here
-
+	const result = await sum(2, 3)
+	logger.info(`Sum result: ${result}`)
 }
 
 main().catch(err => { console.error("Fatal error", err); process.exit(1) })
@@ -18,6 +19,10 @@ main().catch(err => { console.error("Fatal error", err); process.exit(1) })
  * Functions
  * **********************************
  */
+
+export async function sum(a: number, b: number): Promise<number> {
+	return new Promise(resolve => resolve(a + b))
+}
 
 function onCloseSignal() {
 	logger.info("sigint received, shutting down")
