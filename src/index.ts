@@ -1,13 +1,15 @@
 import { env } from "@/common/utils/envConfig"
-import logger from "@/common/utils/logger.js"
+import logger from "@/common/utils/logger"
 
 process.on("SIGINT", onCloseSignal)
 process.on("SIGTERM", onCloseSignal)
 process.on("exit", code => logger.info(`Exiting with code: ${code}`))
-logger.info({ env: env.NODE_ENV, log_level: env.LOG_LEVEL }, "Service starting...")
 
 async function main() {
-	logger.info("Hello, World!")
+	logger.info({ env: env.NODE_ENV, log_level: env.LOG_LEVEL }, "Service starting...")
+
+	// Your application logic here
+
 }
 
 main().catch(err => { console.error("Fatal error", err); process.exit(1) })
