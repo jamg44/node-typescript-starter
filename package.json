@@ -1,0 +1,51 @@
+{
+	"name": "node-typescript-starter",
+	"version": "1.0.0",
+	"description": "A Node.js TypeScript starter project",
+	"author": "jamg44",
+	"repository": "jamg44/node-typescript-starter",
+	"license": "MIT",
+	"main": "index.ts",
+	"private": true,
+	"scripts": {
+		"build": "tsc && tsup",
+		"dev": "node --import=tsx --watch src/index.ts",
+		"start:prod": "node dist/index.js",
+		"check": "biome check --write",
+		"test": "vitest run",
+		"test:cov": "vitest run --coverage"
+	},
+	"dependencies": {
+		"dotenv": "17.2.1",
+		"pino": "9.9.0",
+		"pino-http": "10.5.0",
+		"zod": "3.25.76"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.1.4",
+		"@vitest/coverage-v8": "3.2.4",
+		"pino-pretty": "13.1.1",
+		"tsup": "8.5.0",
+		"tsx": "4.20.4",
+		"typescript": "5.9.2",
+		"vite-tsconfig-paths": "5.1.4",
+		"vitest": "3.2.4"
+	},
+	"tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"outDir": "dist",
+		"format": [
+			"esm",
+			"cjs"
+		],
+		"target": "es2020",
+		"sourcemap": true,
+		"clean": true,
+		"dts": true,
+		"splitting": false,
+		"skipNodeModulesBundle": true
+	},
+	"packageManager": "pnpm@10.14.0"
+}
